@@ -1,0 +1,48 @@
+body{
+	/*background: #75d8f9;*/
+  background-image: url(blobanimation.svg);
+	font-style: italic;
+	font-family: Lobster;
+	margin:0;
+  font-size: larger;
+
+}
+
+img{
+	border-radius: 75%;
+	height: 30%;
+	width: 30%;
+	padding: 1.1em;
+
+}
+
+.main, header, footer h1, footer h3{
+	text-align: center;
+}
+
+.main, p{
+	font-weight: lighter;
+	padding: 1.1em;
+}
+
+
+a, ul{
+	color: #000;
+	text-decoration: none;
+	list-style: none;
+	padding: 1.1em;
+	text-align: center;	
+	font-size: larger;
+}
+
+footer{
+	font-size: .75em;
+}
+
+.links h3{
+	font-size: 1.5em;
+}
+
+header{
+	border-bottom: 1px solid #333;
+}

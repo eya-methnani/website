@@ -1,0 +1,13 @@
+notre groupe:
+Wajdi Hamdoun
+Ghaissen Sebai 
+Eya Methnani
+Mouhib Khriribi
+notre association:
+cps: c'est une association située dans notre école. Elle a comme but aider les pauvres dans les zones rurals.
+le but de notre site web est:
+-Le site web de cette association de charité a pour but de sensibiliser les internautes aux différentes causes qu'elle soutient et de collecter des dons pour financer ses actions.
+-En arrivant sur la page d'accueil, les visiteurs peuvent découvrir l'histoire de l'association ainsi que les différentes actions qu'elle mène dans le domainede l'éducation, de l'environnement ou encore de l'aide aux personnes en situation de précarité.
+-Le site met également en avant les bénévoles et les partenaires qui travaillent avec l'association, ainsi que les événements à venir auxquels les visiteurs peuvent participer pour soutenir la cause.
+-Une section "Faire un don" permet aux internautes de contribuer à l'association en ligne, en choisissant la manière de leur don  et la cause qu'ils souhaitent soutenir. Des témoignages de personnes ayant bénéficié de l'aide de l'association viennent renforcer l'impact de l'engagement de chacun.
+Enfin, une section actualité permet de suivre les actualités de l'association et de rester informé des avancées de ses actions.

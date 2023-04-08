@@ -1,24 +1,304 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="history.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="icon" type="image/png" href="logo.jpg">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 	<title>History</title>
+	<style>
+
+	.banner {
+
+		background-size: 200% 200%;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+	  }
+  
+	  .navebar {
+		width: 85%;
+		padding: 35px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: larger;
+	  }
+  
+	  .logo {
+		/*   cursor: pointer; */
+		/*   background-color: #FFEA11; */
+		margin-left: 20px;
+	  }
+  
+	  .navebar ul li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 20px;
+		/*padding: 0 20px; */
+		position: relative;
+  
+	  }
+  
+	  .navebar ul li a {
+		text-decoration: none;
+		color: #000000;
+		text-transform: capitalize;
+	  }
+  
+	  .navebar ul li::after {
+		content: '';
+		height: 2px;
+		width: 0;
+		/*100% */
+		background: #009688;
+		position: absolute;
+		left: 0;
+		bottom: -8px;
+		transition: 0.5s;
+	  }
+  
+	  .navebar ul li:hover::after {
+		width: 100%;
+	  }
+  
+	  button {
+  
+		width: 150px;
+		height: 40px;
+		padding: 15px 0;
+		text-align: center;
+		margin: 20px 10px;
+		border-radius: 25px;
+		font-weight: bold;
+		border: 2px solid #009688;
+		background: transparent;
+		color: black;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+  
+	  }
+  
+	  button:hover {
+		color: white;
+	  }
+  
+	  button:hover span {
+		width: 100%;
+	  }
+  
+	  button:hover {
+		border: none;
+	  }
+	  .content {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		color: rgb(5, 5, 5);
+	}
+	  .content h1 {
+		text-transform: uppercase;
+		font-size: 40px;
+		margin-top: 80px;
+		color: black;
+	}
+	
+	.banner {
+    
+		background-size: 200% 200%;
+		height: 100%;
+		width: 100%;    
+		/* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0,0,0.5)), url(couverture.jpg); */
+		background-image: url('Logo.png');
+		background-size: cover;
+		background-position: center;
+	}
+    ul{
+        list-style: none;
+    }
+    
+    .foot{
+
+        background-color: #D8D8D8   ;
+        padding: 75px 0;
+    }
+    
+    
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    
+    .f-col{
+        width: 20%;
+        padding: 0 15px;
+    }
+    
+    .f-col h3{
+        font-size: 22px;
+        color: #000000;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .f-col h3::before{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -10px;
+        background-color: #009688;
+        height: 2px;
+        box-sizing: border-box;
+        width: 80px;
+    }
+    
+    .f-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    
+    .f-col ul li a {
+        padding-top: 6px;
+        font-size: 18px;
+        color: #245953;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    
+    
+    .f-col ul li a:hover{
+        color: #F9F5EB;
+        padding-left: 10px;
+    }
+    
+    .f-col ul li i {
+        background-color: #b0bdc1;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #1d202b;
+        transition: all 0.5s ease;
+    }
+    
+    .icon-center{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        
+    }
+    .f-col .icon-right a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: #b0bdc1;
+        margin:0 20px 20px 10px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #1d202b;
+        transition: all 0.5s ease;
+        
+    }
+    #info {
+    color: #09443e;
+    font-size: 1.5rem;
+    }
+    
+    #ensi{  
+        font-size: 16px;
+        color:#245953;
+        
+    }
+    
+    #phone{
+        padding-top: 5px;
+    }
+    
+    .f-col .icon-right a:hover{
+        color: #b0bdc1;
+        background-color:#F9F5EB;
+    }
+    @media(max-width: 767px){
+        .f-col{
+          width: 50%;
+          margin-bottom: 30px;
+      }
+      }
+      @media(max-width: 574px){
+        .f-col{
+          width: 100%;
+      }
+      } 
+      #ensi:hover, #phone:hover{
+        color: #F9F5EB;
+        padding-left: 10px; 
+    }
+    @-webkit-keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform:translateX(calc(-250px*3));
+        }
+       
+    }
+    
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform:translateX(calc(-250px*3));
+        }
+    }    
+	</style>
 </head>
 
 <body>
-	<div class="header">
-		<header>
-			<h1>CPS</h1>
-			<h2>March 30th, 2011 - ENSI</h2>
-		</header>
-	</div>
-	<div class="main">
-		<img src="logocps.jpg" width="1000px" height="400px">
-		<h3>WHO ARE WE ? </h3>
+	<div class="banner">
+		<div class="navebar sticky-top">
+		  <a href="contact+partenars.html"><img class="logo" src="logocps.jpg" loading="lazy" width="60px"
+			  height="60px"></a>
+		  <ul class="ourNav">
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="h.html">About Us</a></li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+				aria-expanded="false">donations</a>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="MoneyDon.html">money</a></li>
+				<li><a class="dropdown-item" href="Vetement.html">clothes</a></li>
+			  </ul>
+			</li>
+			<li><a href="history.html">History</a></li>
+			<li><a href="FAQ.html">FAQs</a></li>
+		  </ul>
+		</div>
+
+	<div class="content">
+		<h1>WHO ARE WE ? </h1>
+		<br>
+		<br>
+		<br>
 		<p>Positive and Sociable Citizens is a club founded in 2011 within the national school of computer science ENSI,
 			supported by the regional committee of the Tunisian Red Crescent in La Manouba, it is in cooperation with
 			worthy associations and organizations trust of civil society.
@@ -28,19 +308,113 @@
 			child protection centers, visits to centers for the protection of the elderly, and finally visits to primary
 			schools in the rural areas. The club's visits to schools are very well studied and are based on several
 			criteria: standard of living of the areas to be visited, climatic conditions, financial conditions.</p>
+    </div>
+    </div>
+    <section id="contact">
+        <footer class="foot">
+            <div class="container">
+                <div class="f-col">
+                    <h3>Some of our most prominent charitable works:</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/CPSENSI/posts/pfbid0dnLDaxD17uQHpi2ff7JqSGQwtWtMW9cfvNZg7sQeoRjZYFNx7xTuHBNn6NPxKECgl">Elementary school help</a></li>
+                        <li><a href="https://www.facebook.com/CPSENSI">Assistance in the vaccination campaign against the Corona virus </a></li>
+                        <li><a href="https://www.facebook.com/CPSENSI">helping the poor with food and clothing</a></li>
+                        <li><a href="https://www.facebook.com/CPSENSI">camping</a></li>
+
+                    </ul>
+
+
+                </div>
+                <div class="f-col">
+                    <h3>Contact</h3>
+                    <ul>
+
+                        <li class="icon-center">
+                            <div>
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>
+                                <a href="s.html">
+                                    <p id="ensi"><span></span>Ecole Nationale Des Sciences de l'Informatique Manouba</p>
+                                </a>
+
+                            </div>
+
+
+                        </li>
+                        <li class="icon-center">
+                            <div>
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div>
+                                <p id="phone">+216 22 909 766</p>
+                            </div>
+
+
+                        </li>
+                        <li class="icon-center">
+                            <div>
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:cps.ensi@gmail.com" target="_blank">cps.ensi@gmail.com</a>
+                            </div>
+
+
+                        </li>
+                        <li class="icon-center">
+                            <div>
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <div>
+                                <a href="ensi.cps.tn" target="_blank">ensi.cps.tn</a>
+                            </div>
+
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+                <div class="f-col">
+                    <h3>Follow Us</h3>
+
+                    <div class="icon-right">
+                        <a href="https://www.facebook.com/CPSENSI" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/cps.ensi/?igshid=YmMyMTA2M2Y%3D&fbclid=IwAR3NGk9httNvb_2P6-NtHXbzUQt4K0VqHTLPKf_sUeX-f86700rjv4MRXdY"
+                            target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/cpsensi/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+	
+
+
+
+
+
 	</div>
-	<footer>
-		<div class="links">
-			<h3>Some of our most prominent charitable works:</h3>
-			<ul>
-				<li><a href="">Elementary school help</a></li>
-				<li><a href="">Assistance in the vaccination campaign against the Corona virus </a></li>
-				<li><a href="">helping the poor with food and clothing</a></li>
-				<li><a href="">camping</a></li>
-			</ul>
-			<h1 class="footer">To follow us ,click <a href="https://www.facebook.com/CPSENSI/about/?ref=page_internal">Here</a></h1>
-		</div> 
-	</footer>
+
+
+
+
+
+
+
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+	integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+	integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+	crossorigin="anonymous"></script>
 </body>
 
 </html>

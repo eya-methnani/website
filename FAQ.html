@@ -1,107 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>FAQ</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+<head>
+  <meta charset="utf-8">
+  <title>FAQ</title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
 
-    <style type="text/css">
-      body{
-        background: #eee;
-        padding-top: 20px;
-        font-family: sans-serif;
-      }
-      .header{
-        border-radius: 20px 20px 0px 0px;
-        padding: 10px 0px;
-        background: purple;
-        color: #fff;
-        width: 100%;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-      }
-      .faq-item{
-        margin-bottom: 40px;
-        margin-top: 40px;
-      }
-      .faq-body{
-        display: none;
-        margin-top: 30px;
-      }
-      .faq-wrapper{
-        width: 75%;
-        margin: 0 auto;
-      }
-      .faq-inner{
-        padding: 30px;
-        background: aliceblue;
-      }
-      .faq-plus{
-        float: right;
-        font-size: 1.4em;
-        line-height: 1em;
-        cursor: pointer;
-      }
-      hr{
-        background-color: #9b9b9b;
-      }
-      .banner {
-    
-        background-size: 200% 200%;
-        height: 100%;
-        width: 100%;    
-        background-size: cover;
-        background-position: center;
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style type="text/css">
+    body {
+      background: #eee;
+      padding-top: 20px;
+      font-family: sans-serif;
     }
-    .navebar{
-        width: 85%;
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: larger;
+
+    .header {
+      border-radius: 20px 20px 0px 0px;
+      padding: 10px 0px;
+      background: purple;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
     }
+
+    .faq-item {
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+
+    .faq-body {
+      display: none;
+      margin-top: 30px;
+    }
+
+    .faq-wrapper {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .faq-inner {
+      padding: 30px;
+      background: aliceblue;
+    }
+
+    .faq-plus {
+      float: right;
+      font-size: 1.4em;
+      line-height: 1em;
+      cursor: pointer;
+    }
+
+    hr {
+      background-color: #9b9b9b;
+    }
+
+    .banner {
+
+      background-size: 200% 200%;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .navebar {
+      width: 85%;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: larger;
+    }
+
     .logo {
-    /*   cursor: pointer; */
-    /*   background-color: #FFEA11; */
+      /*   cursor: pointer; */
+      /*   background-color: #FFEA11; */
       margin-left: 20px;
     }
-    
+
     .navebar ul li {
-        list-style: none;
-        display: inline-block;
-        margin: 0 20px; 
-       /*padding: 0 20px; */
-        position: relative; 
-    
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      /*padding: 0 20px; */
+      position: relative;
+
     }
-    
+
     .navebar ul li a {
-        text-decoration: none;
-        color:#000000;
-        text-transform: capitalize;
+      text-decoration: none;
+      color: #000000;
+      text-transform: capitalize;
     }
-    
-    .navebar ul li::after{
-        content: '';
-        height: 2px;
-        width: 0; /*100% */
-        background: #009688;
-        position: absolute;
-        left: 0;
-        bottom: -8px;
-        transition: 0.5s;
+
+    .navebar ul li::after {
+      content: '';
+      height: 2px;
+      width: 0;
+      /*100% */
+      background: #009688;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 0.5s;
     }
-    
+
     .navebar ul li:hover::after {
-        width: 100%;
+      width: 100%;
     }
+
     button {
-    
+
       width: 150px;
       height: 40px;
       padding: 15px 0;
@@ -113,106 +127,126 @@
       background: transparent;
       color: black;
       cursor: pointer;
-      position:relative;
+      position: relative;
       overflow: hidden;
-      
-  }
-  button:hover{
-  color: white;
-  }
-  button:hover span {
-      width: 100%;
-  }
-  button:hover {
-      border: none;
-  }
-    </style>
-  </head>
 
-  <body>
-    <div class="banner">
-        <div class="navebar sticky-top">
-            <a href="contact+partenars.html"><img class="logo" src="logocps.jpg" loading="lazy" width="60px" height="60px"></a>
-            <ul class="ourNav">
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="h.html">About Us</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-expanded="false">donations</a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="MoneyDon.html">money</a></li>
-                        <li><a class="dropdown-item" href="Vetement.html">clothes</a></li>
-                    </ul>
-                </li>
-                <li><a href="history.html">History</a></li>
-            </ul>
-        </div>
+    }
+
+    button:hover {
+      color: white;
+    }
+
+    button:hover span {
+      width: 100%;
+    }
+
+    button:hover {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navebar sticky-top">
+      <a href="contact+partenars.html"><img class="logo" src="logocps.jpg" loading="lazy" width="60px"
+          height="60px"></a>
+      <ul class="ourNav">
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="h.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">donations</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="MoneyDon.html">money</a></li>
+            <li><a class="dropdown-item" href="Vetement.html">clothes</a></li>
+          </ul>
+        </li>
+        <li><a href="history.html">History</a></li>
+      </ul>
+    </div>
     <div class="container">
-        <div class="row">
-          <div class="faq-wrapper">
-            <div class="header">
-              <h1>FAQs</h1>
+      <div class="row">
+        <div class="faq-wrapper">
+          <div class="header">
+            <h1>FAQs</h1>
+          </div>
+          <div class="faq-inner">
+            <div class="faq-item">
+              <h3>
+                What is the Positive and Sociable Citizens club?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The Positive and Sociable Citizens club is a student-run club founded in 2011 within the National School
+                of Computer Science ENSI in Tunisia. The club's main objective is to promote social awareness, civic
+                responsibility, and leadership among its members.
+              </div>
             </div>
-            <div class="faq-inner">
-              <div class="faq-item">
-                <h3>
-                  What is the Positive and Sociable Citizens club?
-                  <span class="faq-plus">&plus;</span>
-                </h3>
-                <div class="faq-body">
-                  The Positive and Sociable Citizens club is a student-run club founded in 2011 within the National School of Computer Science ENSI in Tunisia. The club's main objective is to promote social awareness, civic responsibility, and leadership among its members.
-                </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                Who can join the Positive and Sociable Citizens club?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Membership of the Positive and Sociable Citizens club is open to all students at the National School of
+                Computer Science ENSI in Tunisia, regardless of their field of study or background.
               </div>
-              <hr>
-              <div class="faq-item">
-                <h3>
-                  Who can join the Positive and Sociable Citizens club?
-                  <span class="faq-plus">&plus;</span>
-                </h3>
-                <div class="faq-body">
-                  Membership of the Positive and Sociable Citizens club is open to all students at the National School of Computer Science ENSI in Tunisia, regardless of their field of study or background.
-                </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What are the benefits of joining the Positive and Sociable Citizens club?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Benefits of joining the Positive and Sociable Citizens club include opportunities to develop leadership
+                and interpersonal skills, participate in community service activities, network with other students and
+                professionals, and make a positive impact on society.
               </div>
-              <hr>
-              <div class="faq-item">
-                <h3>
-                  What are the benefits of joining the Positive and Sociable Citizens club?
-                  <span class="faq-plus">&plus;</span>
-                </h3>
-                <div class="faq-body">
-                  Benefits of joining the Positive and Sociable Citizens club include opportunities to develop leadership and interpersonal skills, participate in community service activities, network with other students and professionals, and make a positive impact on society.
-                </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                How can I get involved with the Positive and Sociable Citizens club?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                To get involved with the Positive and Sociable Citizens club, you can attend one of their events or
+                meetings, reach out to the club directly to find out more about membership, or participate in one of
+                their community service projects or initiatives.
               </div>
-              <hr>
-              <div class="faq-item">
-                <h3>
-                  How can I get involved with the Positive and Sociable Citizens club?
-                  <span class="faq-plus">&plus;</span>
-                </h3>
-                <div class="faq-body">
-                  To get involved with the Positive and Sociable Citizens club, you can attend one of their events or meetings, reach out to the club directly to find out more about membership, or participate in one of their community service projects or initiatives.
-                </div>
-              </div>
-              <hr>
-              <div class="faq-item">
-                <h3>
-                  How can I contact the Positive and Sociable Citizens club for more information or to join?
-                  <span class="faq-plus">&plus;</span>
-                </h3>
-                <div class="faq-body">
-                  You can contact the Positive and Sociable Citizens club by visiting their website, emailing them directly, or by attending one of their events or meetings to find out more about membership and other opportunities to get involved.
-                </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                How can I contact the Positive and Sociable Citizens club for more information or to join?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                You can contact the Positive and Sociable Citizens club by visiting their website, emailing them
+                directly, or by attending one of their events or meetings to find out more about membership and other
+                opportunities to get involved.
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
     <script type="text/javascript">
-      $(".faq-plus").on('click',function(){
+      $(".faq-plus").on('click', function () {
         $(this).parent().parent().find('.faq-body').slideToggle();
       });
     </script>
-  </body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+</body>
 
 </html>

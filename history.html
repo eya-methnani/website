@@ -96,11 +96,9 @@
 		border: none;
 	  }
 	  .content {
-		width: 100%;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		text-align: center;
 		color: rgb(5, 5, 5);
 	}
 	  .content h1 {
@@ -116,7 +114,6 @@
 		height: 100%;
 		width: 100%;    
 		/* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0,0,0.5)), url(couverture.jpg); */
-		background-image: url('Logo.png');
 		background-size: cover;
 		background-position: center;
 	}
@@ -269,7 +266,30 @@
         100%{
             transform:translateX(calc(-250px*3));
         }
-    }    
+    }  
+.one
+{    
+    float: left; 
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width:50%; 
+}
+.two
+{
+    float: right;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    display: flex;
+
+    justify-content: center;
+    height: 400px;
+    width:50%;
+}  
 	</style>
 </head>
 
@@ -293,12 +313,9 @@
 			<li><a href="FAQ.html">FAQs</a></li>
 		  </ul>
 		</div>
-
+<div class="one">
 	<div class="content">
 		<h1>WHO ARE WE ? </h1>
-		<br>
-		<br>
-		<br>
 		<p>Positive and Sociable Citizens is a club founded in 2011 within the national school of computer science ENSI,
 			supported by the regional committee of the Tunisian Red Crescent in La Manouba, it is in cooperation with
 			worthy associations and organizations trust of civil society.
@@ -309,7 +326,11 @@
 			schools in the rural areas. The club's visits to schools are very well studied and are based on several
 			criteria: standard of living of the areas to be visited, climatic conditions, financial conditions.</p>
     </div>
-    </div>
+</div>
+
+    <div class="two"> <img src="logocps.jpg" alt="" class="img"></div>
+
+</div>
     <section id="contact">
         <footer class="foot">
             <div class="container">

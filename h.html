@@ -23,7 +23,7 @@
         background-size: 200% 200%;
         height: 100%;
         width: 100%;
-    
+        background-image: url('');
         background-size: cover;
         background-position: center;
       }
@@ -76,36 +76,6 @@
       .navebar ul li:hover::after {
         width: 100%;
       }
-  
-      button {
-  
-        width: 150px;
-        height: 40px;
-        padding: 15px 0;
-        text-align: center;
-        margin: 20px 10px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: 2px solid #009688;
-        background: transparent;
-        color: black;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-  
-      }
-  
-      button:hover {
-        color: white;
-      }
-  
-      button:hover span {
-        width: 100%;
-      }
-  
-      button:hover {
-        border: none;
-      }
       body {
         background: #eee;
         padding-top: 20px;
@@ -132,10 +102,11 @@
 .dot {
   height: 15px;
   width: 15px;
+  position: relative;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display:inline-block;
   transition: background-color 10.0 s ease;
 }
 
@@ -161,6 +132,26 @@
 .i{
   border-radius: 10%;
 }
+.one
+{    
+    float: left; 
+    
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width:60%; 
+}
+.two
+{
+    float: left;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width:40%;
+}  
     </style>
 </head>
 
@@ -184,7 +175,20 @@
             <li><a href="FAQ.html">FAQs</a></li>
           </ul>
         </div>
-  <div class="content">
+    <div class="one">
+      <div>
+      <h5>Some of our most prominent charitable works:</h5>
+      <ul>
+          <li><a href="https://www.facebook.com/CPSENSI/posts/pfbid0dnLDaxD17uQHpi2ff7JqSGQwtWtMW9cfvNZg7sQeoRjZYFNx7xTuHBNn6NPxKECgl">Elementary school help</a></li>
+          <li><a href="https://www.facebook.com/CPSENSI">Assistance in the vaccination campaign against the Corona virus </a></li>
+          <li><a href="https://www.facebook.com/CPSENSI">helping the poor with food and clothing</a></li>
+          <li><a href="https://www.facebook.com/CPSENSI">camping</a></li>
+
+      </ul>
+      </div>
+  
+    </div>
+    <div class ="two">
     <div class="slideshow-container">
     
     <div class="mySlides fade">
@@ -245,6 +249,7 @@
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
     </script>
+  </div>
     <br>
   <h1 class="mb-4">Our last events</h1>
   <div class="row">

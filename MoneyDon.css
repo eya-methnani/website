@@ -1,58 +1,57 @@
-/*body{
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-    position: relative;
-	height: 100vh;
-	width: 90vw;
-    background-image: url(./money.jpg);
-}*/
-.lg{
-    font-family: 'Montserrat';
-    margin-left: 8%;
-    margin-top: 130px;
-    color: #fe316c;
-    font-size: 45px;
-    font-weight: bolder;
+body {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 90vw;
+  background-image: url(./money.jpg);
+}
+.lg {
+  font-family: "Montserrat";
+  margin-left: 8%;
+  margin-top: 10px;
+  color: #fe316c;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
-.a{
-    margin-left: 40px;
-    margin-top: 5px;
-    width: 300px;
-    background-color:#EAEAEA;
-    border-color: #EAEAEA;
-    height: 50px;
-    border-radius: 70px;
+.a {
+  margin-left: 30px;
+  margin-top: 5px;
+  width: 280px;
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  height: 40px;
+  border-radius: 70px;
 }
-.b{
-    text-align: center;
-    color: #707070;
+.b {
+  text-align: center;
+  color: #707070;
 }
-.sub{
-    background-color: #fe316c;
-    color: white;
-    border: 0;
-    margin-top: 25px;
-    margin-left: 270px;
-    width: 10%;
-    border-radius: 10px;
-    height: 50px;
-    font-family: 'Gilroy-Bold';
-    font-weight: bold;
-    font-size: 20px;
-
+.sub {
+  background-color: #fe316c;
+  color: white;
+  border: 0;
+  margin-top: 25px;
+  margin-left: 250px;
+  width: 10%;
+  border-radius: 10px;
+  height: 40px;
+  font-family: "Gilroy-Bold";
+  font-weight: bold;
+  font-size: 20px;
 }
-.c{
-    margin-left: 200px;
-    margin-top: 30px;
-    width: 20%;
-    background-color:#EAEAEA;
-    border-color: #EAEAEA;
-    height: 50px;
-    border-radius: 70px;
+.c {
+  margin-left: 180px;
+  margin-top: 30px;
+  width: 20%;
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  height: 40px;
+  border-radius: 70px;
 }
-.card{
-    width: 100px;
-    height: 50px;
+.card {
+  width: 100px;
+  height: 50px;
 }

@@ -113,7 +113,7 @@
             </ul>
         </div>
         <div class="container">
-        <form id="donationForm" method="POST" action="process_donation.php">
+        <form id="donationForm2" method="POST" action="process_donation2.php">
             <div class="form-group">
               <label for="donationType">Type of Donation:</label>
               <select id="donationType" name="donationType">
@@ -153,6 +153,61 @@
             <button type="submit">Donate</button>
           </form>
         </div>
+        <script>
+            document.getElementById("donationForm2").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+              
+                // Retrieve the form data
+                var donationType = document.getElementById("donationType").value;
+                var quantity = document.getElementById("quantity").value;
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var phoneNumber = document.getElementById("phoneNumber").value;
+                var address = document.getElementById("address").value;
+                var cause = document.getElementById("cause").value;
+              
+                // Create an object with the form data
+                var formData = {
+                  donationType: donationType,
+                  quantity: quantity,
+                  firstName: firstName,
+                  lastName: lastName,
+                  phoneNumber: phoneNumber,
+                  address: address,
+                  cause: cause
+                };
+              
+                // Send the form data to the server using AJAX or Fetch API
+                // You can use the fetch() function to make an AJAX request
+              
+                // Example using fetch():
+                fetch("process_donation2.php", {
+                  method: "POST",
+                  body: JSON.stringify(formData),
+                  headers: {
+                    "Content-Type": "application/json"
+                  }
+                })
+                .then(response => response.json())
+                .then(data => {
+                  // Process the response from the server
+                  if (data.status === "success") {
+                    // Successful donation
+                    alert(data.message);
+                    // Reset the form
+                    document.getElementById("donationForm2").reset();
+                  } else {
+                    // Donation failed
+                    alert(data.message);
+                  }
+                })
+                .catch(error => {
+                  // Handle any errors that occurred during the request
+                  console.error("Error:", error);
+                });
+              });
+              
+        </script>
 
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

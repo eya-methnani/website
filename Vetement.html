@@ -112,37 +112,48 @@
                 <li><a href="FAQ.html">FAQs</a></li>
             </ul>
         </div>
-        <form >
-        <legend class="lg">Please Fill 
-            The Form </legend>
-            <br><br>
-            <input type="text" placeholder="     Type of donnation" class="a" >
-            <select name="        quantity" class="a">
-                <option value="Quantity" class="b">  Quantity</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="plus">Plus...</option>
-            </select>
-            <br><br>
-            <input type="text" class="a" placeholder="     First Name" >
-            <input type="text" class="a" placeholder="     Last name">
-            
-            <br><br>
-            <input type="text" class="a" placeholder="     Phone">
-            <input type="text" placeholder="     Adress" class="a" >
-            <br>
-            <select name="Cause" class="c">
-                <option class="b">Choose a cause</option>
-                <option value="1">feed an orphan</option>
-                <option value="2">school supplies</option>
-                <option value="3">kit a child</option>
-                <option value="4">Medical supplies</option>
-            </select>
-            <br>
-        
-        <input type="submit" value="Valider" class="sub">
-        </form>
+        <div class="container">
+        <form id="donationForm" method="POST" action="process_donation.php">
+            <div class="form-group">
+              <label for="donationType">Type of Donation:</label>
+              <select id="donationType" name="donationType">
+                <option value="food">Food</option>
+                <option value="clothes">Clothes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity (in kilograms):</label>
+              <input type="number" id="quantity" name="quantity" min="0" step="0.1" required>
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="cause">Cause:</label>
+              <select id="cause" name="cause">
+                <option value="feed_orphan">Feed an Orphan</option>
+                <option value="school_supplies">School Supplies Kit</option>
+                <option value="child_support">Child Support</option>
+                <option value="medical_supplies">Medical Supplies</option>
+              </select>
+            </div>
+            <button type="submit">Donate</button>
+          </form>
+        </div>
+
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

@@ -1,4 +1,4 @@
-body {
+/*body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -6,8 +6,9 @@ body {
   height: 100vh;
   width: 90vw;
   background-image: url(./money.jpg);
-}
-.lg {
+}*/
+
+/*.lg {
   font-family: "Montserrat";
   margin-left: 8%;
   margin-top: 10px;
@@ -54,4 +55,62 @@ body {
 .card {
   width: 100px;
   height: 50px;
+}
+*/
+
+.container {
+
+  display: grid;
+  /*grid-template-columns: 40% 60%;*/
+  grid-column-gap: 50px;
+}
+
+form {
+  margin-top: 80px;
+  max-width: 500px;
+ /* margin: 0 auto;*/
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+
+}
+
+h2 {
+  text-align: left;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+select,
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e91b35;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e91b35;
 }

@@ -1,9 +1,9 @@
-*{
+ /* *{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     
-}
+}*/
 
 
 .banner {
@@ -17,12 +17,15 @@
     background-position: center;
 }
 .navebar{
-    width: 85%;
-    padding: 35px 0;
+    width: 100%;
+    padding: 13px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: larger;
+    background: #EAEAEA;
+    background-color: rgba(234, 234, 234, 0.6);
+       
 }
 .logo {
 /*   cursor: pointer; */

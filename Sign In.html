@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,29 +11,161 @@
     <link rel="icon" type="image/x-icon" href="logocps.jpg" />
     <style>
       @import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+      /* style.css */
+
+
+      .container1 {
+       
+        
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-column-gap: 50px;
+        
+      }
+      
+form {
+  margin-top: 150px;
+  max-width: 500px;
+ /* margin: 0 auto;*/
+  padding: 40px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+      
+      h2 {
+        text-align: center;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #e91b35;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #e91b35;
+      }
+      
+
     </style>
   </head>
   <body>
+    
     <div class="container1">
       <img src="./logo.PNG" alt="logo" class="image" />
-      <form class="form" class="form">
-        <legend class="lg">Sign In</legend>
-        <br /><br /><br /><br /><br />
-        <input type="text" placeholder="      Adresse E-mail" class="kol" />
-        <br /><br />
-        <input type="text" placeholder="      Password" class="kol" />
-        <br /><br /><br /><br /><br /><br />
-        <label for="Remember Me" class="box"
-          ><input
-            type="checkbox"
-            class="a"
-            value="Remember Me"
-            class="box"
-          />Remember Me</label
-        >
-        <a href="./Sign Up.html" class="b"> Sign Up</a>
-        <a href="./connected.html" class="w">Submit</a>
+      <form id="signInForm" method="POST" action="process_form2.php">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Sign In</button>
       </form>
+      
+      
     </div>
+    <script>
+      document.getElementById("signInForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+      
+        // Retrieve the form data
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+      
+        // Perform any client-side validation if needed
+      
+        // Create an object with the form data
+        var formData = {
+          email: email,
+          password: password
+        };
+      
+        // Send the form data to the server using AJAX or Fetch API
+        // You can use the fetch() function to make an AJAX request
+      
+        // Example using fetch():
+        fetch("process_form.php", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Process the response from the server
+          if (data.status === "success") {
+            // Successful sign-in
+            alert(data.message);
+            // Redirect to a success page if needed
+            window.location.href = "success.html";
+          } else {
+            // Sign-in failed
+            alert(data.message);
+          }
+        })
+        .catch(error => {
+          // Handle any errors that occurred during the request
+          console.error("Error:", error);
+        });
+      });
+    </script>
   </body>
 </html>

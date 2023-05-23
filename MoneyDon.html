@@ -18,21 +18,24 @@
     <style>
       @import url("https://fonts.cdnfonts.com/css/montserrat");
       .banner {
-        background-size: 200% 200%;
+        background-size: 100% 100%;
         height: 100%;
         width: 100%;
         background-size: cover;
         background-position: center center;
         background-image: url(./money.jpg);
       }
-      .navebar {
-        width: 85%;
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: larger;
-      }
+      .navebar{
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: larger;
+            background: #EAEAEA;
+           background-color: rgba(234, 234, 234, 0.6);
+              
+        }
       .logo {
         /*   cursor: pointer; */
         /*   background-color: #FFEA11; */
@@ -104,34 +107,96 @@
           <li><a href="FAQ.html">FAQs</a></li>
         </ul>
       </div>
-      <div class="ss">
-        <form>
-          <legend class="lg">Please Fill The Form</legend>
-          <br />
-          <select name="        quantity" class="c">
-            <option value="Quantity" class="b">Payment Amount</option>
-            <option value="5">100DT</option>
-            <option value="10">500Dt</option>
-            <option value="15">1000Dt</option>
-            <option value="plus">2000Dt</option>
-          </select>
-          <br /><br />
-          <input type="text" class="a" placeholder="      Name On Card" />
-          <input type="text" class="a" placeholder="     Card Number" />
-          <br /><br />
-          <input type="text" class="a" placeholder="     Phone" />
-          <input type="text" placeholder="     Adress" class="a" />
-          <br /><br />
-          <input type="date" class="a" placeholder="     Expiry Date " />
-          <input type="password" placeholder="     Security Code" class="a" />
-          <br />
-          <input type="number" placeholder="Zip/Postal Code" class="c" />
-          <br />
-
-          <input type="submit" value="Pay" class="sub" />
+      <div class="container">
+        <h2>Money Donation</h2>
+        <form id="donationForm" method="POST" action="process_donation.php">
+          <div class="form-group">
+            <label for="amount">Donation Amount:</label>
+            <select id="amount" name="amount">
+              <option value="10">$10</option>
+              <option value="20">$20</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cardName">Name on Card:</label>
+            <input type="text" id="cardName" name="cardName" required>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          </div>
+          <div class="form-group">
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" required>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">Zip/Postal Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+          </div>
+          <button type="submit">Donate</button>
         </form>
       </div>
-    </div>
+      <script>
+        document.getElementById("donationForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+        
+          // Retrieve the form data
+          var amount = document.getElementById("amount").value;
+          var cardName = document.getElementById("cardName").value;
+          var cardNumber = document.getElementById("cardNumber").value;
+          var phoneNumber = document.getElementById("phoneNumber").value;
+          var expiryDate = document.getElementById("expiryDate").value;
+          var zipCode = document.getElementById("zipCode").value;
+        
+          // Perform any client-side validation if needed
+        
+          // Create an object with the form data
+          var formData = {
+            amount: amount,
+            cardName: cardName,
+            cardNumber: cardNumber,
+            phoneNumber: phoneNumber,
+            expiryDate: expiryDate,
+            zipCode: zipCode
+          };
+        
+          // Send the form data to the server using AJAX or Fetch API
+          // You can use the fetch() function to make an AJAX request
+        
+          // Example using fetch():
+          fetch("process_donation.php", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+              "Content-Type": "application/json"
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Process the response from the server
+            if (data.status === "success") {
+              // Successful donation
+              alert(data.message);
+              // Reset the form
+              document.getElementById("donationForm").reset();
+            } else {
+              // Donation failed
+              alert(data.message);
+            }
+          })
+          .catch(error => {
+            // Handle any errors that occurred during the request
+            console.error("Error:", error);
+          });
+        });
+        
+      </script>
 
     <script
       type="text/javascript"

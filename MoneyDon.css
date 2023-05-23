@@ -109,3 +109,11 @@ button {
 button:hover {
   background-color: #e91b35;
 }
+.img{
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0%;
+  height: 90%;
+  position: fixed;
+  width: 40%;
+}
